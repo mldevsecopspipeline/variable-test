@@ -5,6 +5,5 @@ jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "🖥️ The workflow is now ready to test your code on the runner."
       - name: List all Defaults EV
       - run: printenv
