@@ -1,13 +1,22 @@
-name: GitHub Actions Demo
-run-name: Github Actions EV Demo
-on: [push]
+name: Run Python Script
+
+on:
+  push:
+    branches:
+      - main
+
 jobs:
-  Explore-GitHub-Actions:
+  run_script:
     runs-on: ubuntu-latest
+
     steps:
-      - name: List all Defaults EV
-        run: printenv
-      - name: Access Event Name
-        run: |
-          echo "The Event that triggered this workflow ${{ github.event_name }}"
-          echo "Name of the Branch ${{ github.ref_name }}"
+    - name: Checkout repository
+      uses: actions/checkout@v2
+      
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.x'
+        
+    - name: Run Python script
+      run: python test.py
