@@ -8,4 +8,4 @@ jobs:
       - name: List all Defaults EV
         run: printenv
       - name: Access Event Name
-        run: $GITHUB_EVENT_NAME
+        run: ${{ github.event_name }}
