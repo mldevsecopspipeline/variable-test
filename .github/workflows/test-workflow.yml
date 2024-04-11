@@ -1,0 +1,10 @@
+name: GitHub Actions Demo
+run-name: Github Actions EV Demo
+on: [push]
+jobs:
+  Explore-GitHub-Actions:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "🖥️ The workflow is now ready to test your code on the runner."
+      - name: List all Defaults EV
+      - run: printenv
