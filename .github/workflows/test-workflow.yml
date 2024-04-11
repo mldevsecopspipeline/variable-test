@@ -6,4 +6,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: List all Defaults EV
-      - run: printenv
+        run: printenv
